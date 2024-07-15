@@ -1,0 +1,27 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  reconnect: false
+
+development:
+  <<: *default
+  database: notes_api_development
+  username: root
+  password:
+  host: localhost
+  port: 3306
+
+test:
+  <<: *default
+  database: notes_api_test
+  username: postgres
+  password:
+  host: localhost
+  port: 3306
+
+production:
+  <<: *default
+  database: notes_api_production
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
