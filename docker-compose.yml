@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: mysql:latest
+    image: mysql:9.0.0
     ports:
     - 3306:3306
     volumes:
@@ -9,12 +9,24 @@ services:
     - mysql:/var/lib/mysql
     env_file:
     - .env
+
   redis:
     image: redis:latest
     ports:
     - 63792:63792
     volumes:
     - redis:/data
+    env_file:
+    - .env
+
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+    - 3000:3000
+    depends_on:
+    - db
     env_file:
     - .env
 
