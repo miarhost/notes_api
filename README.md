@@ -5,6 +5,7 @@ For example
 -for database container:
 * mysql -uroot -p -A
 create database <database-name>;
+mysql --user=<> --password=<> notes_api_development
 - for web:
 rails db:migrate
 rails c
