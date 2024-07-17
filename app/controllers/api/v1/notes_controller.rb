@@ -1,7 +1,7 @@
 module Api
   module V1
     class NotesController < ApplicationController
-      before_action :set_note except: %i[create index]
+      before_action :set_note, except: %i[create index]
 
       def index
         @notes = paginate_collection(notes_filtered(Note), params[:page], 5)
@@ -28,6 +28,10 @@ module Api
       end
 
       private
+
+      def set_note
+        @note = Note.find(params[:id])
+      end
 
       def serializer
         NoteSerializer

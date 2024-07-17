@@ -10,7 +10,7 @@ development:
   username: root
   password: root
   host: localhost
-  port: 3306
+  port: 33061
 
 test:
   <<: *default
@@ -18,7 +18,7 @@ test:
   username: root
   password: root
   host: localhost
-  port: 3306
+  port: 33061
 
 production:
   <<: *default

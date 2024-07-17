@@ -1,11 +1,9 @@
+For running mysql, redis, web and worker containers run
 * docker-compose up --build -d
-Runs from docker, can be tested from web container shell.
-For example
-* docker exec -it <container-name>
--for database container:
-* mysql -uroot -p -A
-create database <database-name>;
-mysql --user=<> --password=<> notes_api_development
-- for web:
-rails db:migrate
-rails c
+
+# Rails version
+7.0.8
+# Ruby version
+3.2.1
+# MySQL version
+8.0.35

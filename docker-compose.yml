@@ -3,8 +3,7 @@ services:
   db:
     image: mysql:9.0.0
     ports:
-    - 3306:3306
-    - 33060:33060
+    - 33061:33061
     restart: always
     volumes:
     - ./data/conf.d:/etc/mysql/conf.d
