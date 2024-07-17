@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Template 1",
+    "payload": "This is test template payload. Create your note!"
+  },
+  {
+    "title": "Template 2",
+    "payload": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate, metus sit amet volutpat vestibulum, enim dui faucibus libero, sed convallis odio enim eu nisl. Integer sit amet interdum justo. Aliquam finibus leo enim. Sed felis tellus, laoreet vel facilisis at, eleifend sit amet sem. Pellentesque dignissim, est euismod auctor venenatis, orci lorem pretium ex, sit amet condimentum ipsum mauris vel eros. Cras dictum diam a pulvinar dignissim. Fusce in purus vitae nunc placerat pharetra quis tincidunt neque. Duis et turpis eu orci viverra vestibulum at a nisl. Nunc at maximus neque. Proin auctor ligul"
+  },
+  {
+    "title": "Template 3",
+    "payload": "ligula odio, vitae pharetra enim luctus eget. Curabitur pretium congue porta. Fusce vehicula pretium rhoncus. Ut consequat, nibh id lacinia commodo, erat risus imperdiet augue, ut volutpat tellus turpis eget elit. Duis at bibendum massa. Integer at sapien egestas, gravida tellus eu, sollicitudin nibh. Curabitur eu congue mauris."
+  },
+  {
+    "title": "Template 4",
+    "payload": "Nullam fringilla, purus ac sodales accumsan, neque felis pulvinar turpis, at semper ipsum purus sed sapien. Maecenas eleifend ultricies suscipit. Vivamus congue maximus dui, ut tempor ante posuere sed. Nullam sit amet elit aliquet, convallis tellus et, fermentum diam. Fusce pellentesque purus est, vitae semper mi varius ut. Vestibulum sollicitudin erat eu turpis faucibus, id vulputate dui rutrum. Donec pulvinar in augue id fringilla. Duis a arcu nec nulla pulvinar imperdiet ut vel eros. Proin imperdiet bibendum diam, vitae pulvinar sem rhoncus sit amet. "
+  },
+  {
+    "title": "Template 5",
+    "payload": "Nulla facilisi. Aenean efficitur nisl sit amet sem consectetur pellentesque. Suspendisse sit amet sagittis odio. Sed euismod placerat volutpat. Nam rhoncus, velit eu condimentum vulputate, arcu ex pulvinar magna, sed posuere mauris magna ac ante. Donec suscipit libero vel lig!"
+  },
+  {
+    "title": "Template 6",
+    "payload": "la luctus tristique. Aenean tincidunt diam lorem, ut dignissim diam malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aliquam lorem nisl, scelerisque eu erat sed, auctor mattis nulla. Phasellus at metus venenatis, suscipit nunc ut, maximus nunc. Nulla tortor purus, aliquam quis nisi ut, commodo fringilla nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In et risus n"
+  },
+  {
+    "title": "Template 7",
+    "payload": "Nulla facilisi. Nulla consectetur, ipsum vitae euismod consectetur, mi augue fermentum enim, vitae mollis lacus orci a ipsum. Fusce consectetur porta"
+  },
+  {
+    "title": "Template 8",
+    "payload": "a leo, non dictum dolor cursus id. Nam sollicitudin eget sapien sit amet dictum. Integer cursus finibus mi, quis rutrum quam aliquet et. Nulla efficitur leo dui. Etiam pulvinar, augue ac maximus vehicula, leo felis sodales elit, id tristique lectus leo ac leo. "
+  },
+  {
+    "title": "Template 9",
+    "payload": "Proin tempor posuere quam, et pellentesque metus lobortis a. Nullam molestie, turpis quis cursus dictum, tellus risus efficitur risus, quis rhoncus elit ipsum quis sem. Nam risus turpis, ornare nec ultricies non, egestas vel eros. Nam diam tellus, commodo vitae sem quis, viverra lacinia ligula."
+  }
+]

@@ -31,6 +31,19 @@ services:
     env_file:
     - .env
 
+  webhook:
+    build:
+      context: .
+      dockerfile: ./webhook.dockerfile
+    container_name: webhook
+    ports:
+    - 9902:9902
+    expose:
+    - "9902"
+    volumes:
+    - webhook:/var/share/nginx/html
+
 volumes:
   mysql:
   redis:
+  webhook:

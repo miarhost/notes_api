@@ -1,0 +1,1 @@
+class SampleNote < ApplicationRecord; end
