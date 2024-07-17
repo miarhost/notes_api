@@ -5,7 +5,7 @@ module ErrorsHandler
     klass.class_eval do
       rescue_from ActiveRecord::RecordInvalid, with: :validation_error
       rescue_from ActiveRecord::RecordNotFound, with: :not_found_error
-      rescue_from RestClient::ExceptionWithResponse, with: :external_api_error
+      rescue_from Faraday::Error, with: :external_api_error
       rescue_from ErrorsHandler::EmptyQueryParams, with: :raise_if_blank
     end
   end
