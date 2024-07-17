@@ -9,14 +9,11 @@ gem "mysql2", "~> 0.5"
 gem 'dotenv-rails'
 gem 'faraday'
 gem "puma", "~> 5.0"
-gem 'jwt'
 gem 'kaminari'
 gem "redis", "~> 4.0"
 gem 'redis-namespace'
 gem 'redis-rails'
 gem 'redis-store'
-gem "kredis"
-gem 'rest-client'
 gem 'sidekiq', '~> 7.1', '>= 7.1.2'
 gem 'sidekiq-status'
 gem 'whenever', require: false

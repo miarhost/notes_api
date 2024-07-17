@@ -1,1 +1,2 @@
-class SampleNote < ApplicationRecord; end
+class SampleNote < Note
+end
