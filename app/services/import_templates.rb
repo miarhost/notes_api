@@ -4,6 +4,7 @@ class ImportTemplates
     payload = Faraday.get(url)
     result = JSON.parse(payload.body)
     result.map!{ |h| [h] }
+    MonitorService.new.update_mongo_log
   rescue OpenURI::HTTPError => e
     Rails.logger.error(e.message)
   end

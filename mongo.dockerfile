@@ -7,4 +7,4 @@ ENV MONGO_INITDB_DATABASE admin
 ADD ./app/docker/mongo/mongo-init.js /docker-entrypoint-initdb.d/
 
 CMD ["mongod"]
-EXPOSE 20218
+EXPOSE 20217

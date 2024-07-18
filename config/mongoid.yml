@@ -1,0 +1,17 @@
+development:
+  clients:
+    default:
+      uri: "mongodb://mongouser:mongopwd@localhost:27017/logger-info"
+      server_selection_timeout: 2
+      connect_timeout: 5
+      socket_timeout: 5
+      min_pool_size: 1
+      max_pool_size: 10
+  options:
+
+test:
+  clients:
+    default:
+      uri: "mongodb://test:test@localhost:27017/logger-test"
+      max_pool_size: 1
+  options:

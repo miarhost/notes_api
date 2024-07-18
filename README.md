@@ -9,8 +9,16 @@ to run tests run
 * rspec
 
 ## Features
-Templates collecting "webhook" is hosted via webhook docker container
+* Templates collecting "webhook" is hosted via webhook docker container
 at "http://127.0.0.1:9902/note_templates/templates.json"
+* Backround processing emulates the situation, where there are tons of records to fetch and perform in batches, with
+* retry to fallback queues. Errors handling same as info that can be queued ( by logs or any logic) is saved
+* to sidekiq status records.
+* Tests are covering all crud endpoints with successful and failure contexts, using json matchers, faker, factory bot
+* Webhook test mock is added , that can be reused by unit tests.
+* MongdDB is working from docker (same as Redis), MongoID provides ORM, single simple model RequestLog collects a log
+* per request and is retrieved  by date ( for example ) at scope.
+* This logging is added for each internal and external request.
 
 ## AS Description
 * Filtering logic includes query objects
@@ -21,11 +29,7 @@ at "http://127.0.0.1:9902/note_templates/templates.json"
 * Backround processing is using good pracices - idempotency, usage of max threads, processes scaling, logging
 * REST API good practices - unified messaging format, resource naming conventions, layering
 * DB design uses STI for storing fetched pieces of data as templates for notes.
-* Backround processing emulates the situation, where there are tons of records to fetch and perform in batches, with
-* retry to fallback queues. Errors handling same as info that can be queued ( by logs or any logic) is saved
-* to sidekiq status records.
-* Tests are covering all crud endpoints with successful and failure contexts, using json matchers, faker, factory bot
-* Webhook test mock is added , that can be reused by unit tests.
+* Mysql fulltext index is added for searching by "content" field and corresponding querying.
 
 ## Gems Used Additionally
 * Sidekiq Status plugin
