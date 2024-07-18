@@ -1,12 +1,10 @@
 module ErrorsHandler
-  class EmptyQueryParams < StandardError; end
 
   def self.included(klass)
     klass.class_eval do
       rescue_from ActiveRecord::RecordInvalid, with: :validation_error
       rescue_from ActiveRecord::RecordNotFound, with: :not_found_error
       rescue_from Faraday::Error, with: :external_api_error
-      rescue_from ErrorsHandler::EmptyQueryParams, with: :raise_if_blank
     end
   end
 
@@ -23,6 +21,6 @@ module ErrorsHandler
   end
 
   def raise_if_blank
-    render json: { status: :unprocessable_entity, message: 'Please fill the fields above' }, status: 422
+    render json: { status: :unprocessable_entity, message: 'Please fill the fields' }, status: 422
   end
 end

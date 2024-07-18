@@ -12,11 +12,15 @@ module Api
         @note = Note.new(note_params)
         @note.save!
         render json: @note, serializer: , status: 201
+      rescue StandardError
+        raise_if_blank
       end
 
       def update
         @note.update!(note_params)
         render json: @note, serializer:
+      rescue StandardError
+        raise_if_blank
       end
 
       def destroy
