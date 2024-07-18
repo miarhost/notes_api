@@ -52,7 +52,7 @@ module Api
       end
 
       def filter_params
-        params[:filter] ? params.require[:search].permit() : {}
+        params[:filter] ? params.require(:search).permit(:title, :content) : {}
       end
 
       def filter
