@@ -57,10 +57,27 @@ services:
     volumes:
     - webhook:/var/share/nginx/html
 
+  mongodb:
+    build:
+      context: .
+      dockerfile: mongo.dockerfile
+    platform: linux/amd64
+    restart: always
+    env_file:
+    - .env
+    ports:
+    - 27018:27018
+    volumes:
+    - mongodb:/data
+    - ./app/docker/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - default
+
 volumes:
   mysql:
   redis:
   webhook:
+  mongodb:
 
 networks:
   nginx_network:
