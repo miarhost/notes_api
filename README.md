@@ -21,6 +21,20 @@ at "http://127.0.0.1:9902/note_templates/templates.json"
 * Backround processing is using good pracices - idempotency, usage of max threads, processes scaling, logging
 * REST API good practices - unified messaging format, resource naming conventions, layering
 * DB design uses STI for storing fetched pieces of data as templates for notes.
+* Backround processing emulates the situation, where there are tons of records to fetch and perform in batches, with
+* retry to fallback queues. Errors handling same as info that can be queued ( by logs or any logic) is saved
+* to sidekiq status records.
+* Tests are covering all crud endpoints with successful and failure contexts, using json matchers, faker, factory bot
+* Webhook test mock is added , that can be reused by unit tests.
+
+## Gems Used Additionally
+* Sidekiq Status plugin
+* Whenever cron schedule
+* Faraday http client
+* Kaminari for pagination
+* AMSerializer
+* JSON expectations RSpec matcher
+* Webmock external http requests mock for RSpec
 
 ## Versions
 * Rails version

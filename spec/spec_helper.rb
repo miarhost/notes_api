@@ -13,16 +13,20 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.before(:each) do
-    stub_request(:get, ENV['WEBHOOK_URL']).
+    stub_request(:get, ENV['WEBHOOK_HOST']).
     with(
       headers: {
       'Accept'=>'application/json',
       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
       'Content-Length'=>'113',
       'Content-Type'=>'application/json',
-      'Host'=>'webhook:9902',
+      'Host'=>'localhost:3001',
       'User-Agent'=>'Faraday v2.9.0'
       }).
-    to_return(status: 200, body: [{'title': 'example', 'payload': 'example text'},{'title': 'example 1', 'payload': 'example 1 text'},{'title': 'example 2', 'payload': 'example 2 text'}], headers: {})
+    to_return(status: 200,
+              body: [{'title': 'example', 'payload': 'example text'},
+              {'title': 'example 1', 'payload': 'example 1 text'},
+              {'title': 'example 2', 'payload': 'example 2 text'}],
+              headers: {})
   end
 end

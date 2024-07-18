@@ -1,7 +1,7 @@
 module Api
   module V1
     class NotesController < ApplicationController
-      before_action :set_note, except: %i[create index]
+      before_action :set_note, except: %i[create index enqueue_templates]
 
       def index
         @notes = paginate_collection(notes_filtered(Note), params[:page], 5)
@@ -21,6 +21,12 @@ module Api
         render json: @note, serializer:
       rescue StandardError
         raise_if_blank
+      end
+
+      def enqueue_templates
+        worker = UpdateTemplatesWorker.perform_async
+        worker_status = Sidekiq::Status.get_all(worker)
+        render json: { result: worker_status }, status: 202
       end
 
       def destroy
